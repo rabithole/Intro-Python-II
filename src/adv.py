@@ -1,5 +1,19 @@
 from room import Room
 
+from player import Player
+
+#### REPL Read, eval, print, loop
+# Read: take user input.
+# Eval: evaluate the input.
+# Print: shows the output to the user.
+# Loop: repeat.
+
+# direction = input('Which direction would you like to go? \n Choose a compass direction: \n N = North, S = South, E = East, or W = West \n')
+
+# print(direction)
+
+
+
 # Declare all the rooms
 
 room = {
@@ -21,6 +35,11 @@ chamber! Sadly, it has already been completely emptied by
 earlier adventurers. The only exit is to the south."""),
 }
 
+# print(room)
+
+# for i in room:
+# 	print(f'{room[i]}\n')
+# 	print(Player)
 
 # Link rooms together
 
@@ -38,6 +57,8 @@ room['treasure'].s_to = room['narrow']
 #
 
 # Make a new player object that is currently in the 'outside' room.
+wanda = Player('Wanda', room['outside'])
+print(wanda.room.name)
 
 # Write a loop that:
 #
