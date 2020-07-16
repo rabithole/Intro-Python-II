@@ -32,7 +32,6 @@ chamber! Sadly, it has already been completely emptied by
 earlier adventurers. The only exit is to the south."""),
 }
 
-print(room['foyer'].description)
 
 # Link rooms together
 
@@ -51,7 +50,7 @@ room['treasure'].s_to = room['narrow']
 
 # Make a new player object that is currently in the 'outside' room.
 wanda = Player('Wanda', room['outside'])
-print(wanda.currentRoom.name)
+# print(wanda.currentRoom.name)
 
 # Write a loop that:
 #
@@ -63,5 +62,10 @@ print(wanda.currentRoom.name)
 # Print an error message if the movement isn't allowed.
 #
 # If the user enters "q", quit the game.
+
+room['foyer'].addItems('sword')
+room['foyer'].addItems('food')
+
+room['foyer'].roomItems()
 
 

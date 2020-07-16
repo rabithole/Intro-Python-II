@@ -6,4 +6,8 @@ class Room:
 		self.description = description
 		self.items = items		
 
+	def addItems(self, item):
+		self.items.append(item)
 
+	def roomItems(self):
+		print(f'Items in foyer: {self.items}')
