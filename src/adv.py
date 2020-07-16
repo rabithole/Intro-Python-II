@@ -31,7 +31,7 @@ to north. The smell of gold permeates the air."""),
 chamber! Sadly, it has already been completely emptied by
 earlier adventurers. The only exit is to the south."""),
 }
-
+print(room['outside'])
 
 # Link rooms together
 
@@ -50,7 +50,7 @@ room['treasure'].s_to = room['narrow']
 
 # Make a new player object that is currently in the 'outside' room.
 wanda = Player('Wanda', room['outside'])
-# print(wanda.currentRoom.name)
+print(wanda)
 
 # Write a loop that:
 #
@@ -63,9 +63,9 @@ wanda = Player('Wanda', room['outside'])
 #
 # If the user enters "q", quit the game.
 
-room['foyer'].addItems('sword')
-room['foyer'].addItems('food')
+# room['foyer'].addItems('sword')
+# room['foyer'].addItems('food')
 
-room['foyer'].roomItems()
+# room['foyer'].roomItems()
 
 

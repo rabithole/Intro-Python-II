@@ -11,3 +11,7 @@ class Room:
 
 	def roomItems(self):
 		print(f'Items in foyer: {self.items}')
+
+	def __str__(self):
+		return f'Where: {self.name}: {self.description} Items: {self.items}'
+

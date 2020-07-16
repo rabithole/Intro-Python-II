@@ -4,6 +4,8 @@ ROOM
 		Print out all items available in the room when the player is in the room. 
 	Items:
 		Hold items in rooms with a list. 
+	Direction: 
+		Depends on the room the player is in. 
 
 
 PLAYER
