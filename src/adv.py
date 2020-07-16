@@ -10,9 +10,6 @@ from player import Player
 
 # direction = input('Which direction would you like to go? \n Choose a compass direction: \n N = North, S = South, E = East, or W = West \n')
 
-# print(direction)
-
-
 
 # Declare all the rooms
 
@@ -35,11 +32,7 @@ chamber! Sadly, it has already been completely emptied by
 earlier adventurers. The only exit is to the south."""),
 }
 
-# print(room)
-
-# for i in room:
-# 	print(f'{room[i]}\n')
-# 	print(Player)
+print(room['foyer'].description)
 
 # Link rooms together
 
@@ -58,7 +51,7 @@ room['treasure'].s_to = room['narrow']
 
 # Make a new player object that is currently in the 'outside' room.
 wanda = Player('Wanda', room['outside'])
-print(wanda.room.name)
+print(wanda.currentRoom.name)
 
 # Write a loop that:
 #
@@ -70,3 +63,5 @@ print(wanda.room.name)
 # Print an error message if the movement isn't allowed.
 #
 # If the user enters "q", quit the game.
+
+
