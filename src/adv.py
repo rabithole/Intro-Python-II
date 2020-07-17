@@ -51,7 +51,7 @@ player = Player(input('Choose a name: '), room['outside'])
 
 def whichWay():
 	global direction 
-	direction = input('Which direction would you like to go? \n Choose a compass direction: \n N = North, S = South, E = East, or W = West \n')
+	direction = input('Choose a compass direction: \n N = North, S = South, E = East, or W = West \n')
 
 whichWay()
 
@@ -75,7 +75,7 @@ while True:
 			print("Can not go South from here!")
 			whichWay()
 	if direction == 'e':
-		if player.currentRoom.s_to is not None:
+		if player.currentRoom.e_to is not None:
 			player.currentRoom = player.currentRoom.e_to
 			print('Line 80: You are in the ', player.currentRoom.name)
 			whichWay()
@@ -83,7 +83,7 @@ while True:
 			print("Can not go East from here!")
 			whichWay()
 	if direction == 'w':
-		if player.currentRoom.s_to is not None:
+		if player.currentRoom.w_to is not None:
 			player.currentRoom = player.currentRoom.w_to
 			print('Line 88: You are in the ', player.currentRoom.name)
 			whichWay()
