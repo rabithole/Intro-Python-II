@@ -2,13 +2,6 @@ from room import Room
 
 from player import Player
 
-#### REPL Read, eval, print, loop
-# Read: take user input.
-# Eval: evaluate the input.
-# Print: shows the output to the user.
-# Loop: repeat.
-
-
 # Declare all the rooms
 
 room = {
@@ -29,7 +22,6 @@ to north. The smell of gold permeates the air."""),
 chamber! Sadly, it has already been completely emptied by
 earlier adventurers. The only exit is to the south."""),
 }
-# print('Line 34: ', room.name)
 
 # Link rooms together
 
@@ -47,7 +39,6 @@ room['treasure'].s_to = room['narrow']
 
 # Make a new player object that is currently in the 'outside' room.
 player = Player(input('Choose a name: '), room['outside'])
-# print(f'Welcome {player.name}. You are currently in the {player.currentRoom}')
 
 def whichWay():
 	global direction 
@@ -55,7 +46,6 @@ def whichWay():
 
 whichWay()
 
-# print('Line 53: ', player.currentRoom.items)
 # Write a loop that:
 while True: 
 	if direction == 'n': 
@@ -92,22 +82,6 @@ while True:
 			whichWay()
 	else: 
 		continue
-		# if player.currentRoom is room['outside']:
-		# 	player.currentRoom.n_to 
-		# 	# player.currentRoom = room['foyer']
-		# 	print('You are now in the ', player.currentRoom.name)
-		# 	break
-		# 	# player.currentRoom = player.currentRoom.n_to
-
-			
-		# else: 
-		# 	print('Line 65: ' ,player.currentRoom.n_to)
-		# 	break
-
-
-		# room['outside'].n_to = room['foyer']
-		 
-			# player.currentRoom = player.room.n_to
 			
 
 # * Prints the current room name
@@ -118,16 +92,3 @@ while True:
 # Print an error message if the movement isn't allowed.
 #
 # If the user enters "q", quit the game.
-
-# print('Line 66:', wanda.currentRoom)
-
-# room['foyer'].addItems('sword')
-# room['foyer'].addItems('food')
-# print(player.n_to)
-
-# room['outside'].addItems('food')
-
-# room['foyer'].roomItems()
-# room['outside'].roomItems()
-
-
