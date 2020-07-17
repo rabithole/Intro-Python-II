@@ -41,31 +41,68 @@ room['overlook'].s_to = room['foyer']
 room['narrow'].w_to = room['foyer']
 room['narrow'].n_to = room['treasure']
 room['treasure'].s_to = room['narrow']
-
 #
 # Main
 #
 
 # Make a new player object that is currently in the 'outside' room.
 player = Player(input('Choose a name: '), room['outside'])
-print(f'Welcome {player.name}. You are currently in the {player.currentRoom}')
+# print(f'Welcome {player.name}. You are currently in the {player.currentRoom}')
 
-direction = input('Which direction would you like to go? \n Choose a compass direction: \n N = North, S = South, E = East, or W = West \n')
-# print('Line 54: ', player.currentRoom.n_to)
+def whichWay():
+	global direction 
+	direction = input('Which direction would you like to go? \n Choose a compass direction: \n N = North, S = South, E = East, or W = West \n')
+
+whichWay()
+
+# print('Line 53: ', player.currentRoom.items)
 # Write a loop that:
 while True: 
 	if direction == 'n': 
-		if player.currentRoom is room['outside']:
-			player.currentRoom.n_to 
-			# player.currentRoom = room['foyer']
-			print('You are now in the ', player.currentRoom.name)
-			break
-			# player.currentRoom = player.currentRoom.n_to
+		if player.currentRoom.n_to is not None:
+			player.currentRoom = player.currentRoom.n_to
+			print('Line 64: You are now in the ', player.currentRoom.name)
+			whichWay()
+		else: 
+			print("Can not go North from here!")
+			whichWay()
+	if direction == 's':
+		if player.currentRoom.s_to is not None:
+			player.currentRoom = player.currentRoom.s_to
+			print('Line 72: You are in the ', player.currentRoom.name)
+			whichWay()
+		else:
+			print("Can not go South from here!")
+			whichWay()
+	if direction == 'e':
+		if player.currentRoom.s_to is not None:
+			player.currentRoom = player.currentRoom.e_to
+			print('Line 80: You are in the ', player.currentRoom.name)
+			whichWay()
+		else:
+			print("Can not go East from here!")
+			whichWay()
+	if direction == 'w':
+		if player.currentRoom.s_to is not None:
+			player.currentRoom = player.currentRoom.w_to
+			print('Line 88: You are in the ', player.currentRoom.name)
+			whichWay()
+		else:
+			print("Can not go West from here!")
+			whichWay()
+	else: 
+		continue
+		# if player.currentRoom is room['outside']:
+		# 	player.currentRoom.n_to 
+		# 	# player.currentRoom = room['foyer']
+		# 	print('You are now in the ', player.currentRoom.name)
+		# 	break
+		# 	# player.currentRoom = player.currentRoom.n_to
 
 			
-		else: 
-			print('Line 65: ' ,player.currentRoom.n_to)
-			break
+		# else: 
+		# 	print('Line 65: ' ,player.currentRoom.n_to)
+		# 	break
 
 
 		# room['outside'].n_to = room['foyer']
