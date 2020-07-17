@@ -8,8 +8,6 @@ from player import Player
 # Print: shows the output to the user.
 # Loop: repeat.
 
-# direction = input('Which direction would you like to go? \n Choose a compass direction: \n N = North, S = South, E = East, or W = West \n')
-
 
 # Declare all the rooms
 
@@ -31,7 +29,7 @@ to north. The smell of gold permeates the air."""),
 chamber! Sadly, it has already been completely emptied by
 earlier adventurers. The only exit is to the south."""),
 }
-print(room['outside'])
+# print('Line 34: ', room.name)
 
 # Link rooms together
 
@@ -49,11 +47,32 @@ room['treasure'].s_to = room['narrow']
 #
 
 # Make a new player object that is currently in the 'outside' room.
-wanda = Player('Wanda', room['outside'])
-print(wanda)
+player = Player(input('Choose a name: '), room['outside'])
+print(f'Welcome {player.name}. You are currently in the {player.currentRoom}')
 
+direction = input('Which direction would you like to go? \n Choose a compass direction: \n N = North, S = South, E = East, or W = West \n')
+# print('Line 54: ', player.currentRoom.n_to)
 # Write a loop that:
-#
+while True: 
+	if direction == 'n': 
+		if player.currentRoom is room['outside']:
+			player.currentRoom.n_to 
+			# player.currentRoom = room['foyer']
+			print('You are now in the ', player.currentRoom.name)
+			break
+			# player.currentRoom = player.currentRoom.n_to
+
+			
+		else: 
+			print('Line 65: ' ,player.currentRoom.n_to)
+			break
+
+
+		# room['outside'].n_to = room['foyer']
+		 
+			# player.currentRoom = player.room.n_to
+			
+
 # * Prints the current room name
 # * Prints the current description (the textwrap module might be useful here).
 # * Waits for user input and decides what to do.
@@ -63,9 +82,15 @@ print(wanda)
 #
 # If the user enters "q", quit the game.
 
+# print('Line 66:', wanda.currentRoom)
+
 # room['foyer'].addItems('sword')
 # room['foyer'].addItems('food')
+# print(player.n_to)
+
+# room['outside'].addItems('food')
 
 # room['foyer'].roomItems()
+# room['outside'].roomItems()
 
 

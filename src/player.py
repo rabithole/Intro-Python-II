@@ -6,5 +6,10 @@ class Player:
 		self.currentRoom = currentRoom
 		self.inventory = inventory
 
+
+
+	# def move(self):
+	# 	if self.currentRoom 
+
 	def __str__(self):
 		return f'{self.name} {self.currentRoom.name} {self.inventory}'
