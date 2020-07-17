@@ -19,24 +19,4 @@ class Room:
 	# def __str__(self):
 	# 	return f'{self.n_to}'
 
-# print(Room)
-
-
-
-# class Room:
-# 	def __init__(self, name, description):
-# 		self.name = foyer
-# 		self.description = description of foyer
-# 		self.n_to = room["overlook"]
-# 		self.s_to = room["outside"]
-# 		self.w_to = None
-# 		self.e_to = room["narrow"]
-
-
-# while True:
-# 	if direction == "n":
-# 		if player.currentRoom.n_to is not None:
-# 			player.currentRoom = player.currentRoom.n_to
-# 		else:
-# 			print("go back")
 
