@@ -10,8 +10,8 @@ class Room:
 		self.w_to = None
 		self.e_to = None
 
-	def addItmes(self, item):
-		self.item.append(item)
+	def addItems(self, item):
+		self.items.append(item)
 
 	def removeItem(self, item):
 		self.item.remove(item)
